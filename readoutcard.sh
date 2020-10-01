@@ -1,6 +1,6 @@
 package: ReadoutCard
 version: "%(tag_basename)s"
-tag: v0.26.0
+tag: its-consistency-patch
 requires:
   - boost
   - "GCC-Toolchain:(?!osx)"
@@ -15,7 +15,7 @@ build_requires:
   - CMake
 prepend_path:
   PYTHONPATH: $READOUTCARD_ROOT/lib
-source: https://github.com/AliceO2Group/ReadoutCard
+source: https://github.com/kostorr/ReadoutCard
 incremental_recipe: |
   make ${JOBS:+-j$JOBS} install
   mkdir -p $INSTALLROOT/etc/modulefiles && rsync -a --delete etc/modulefiles/ $INSTALLROOT/etc/modulefiles

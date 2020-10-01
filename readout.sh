@@ -1,6 +1,6 @@
 package: Readout
 version: "%(tag_basename)s"
-tag: v1.5.2
+tag: its-consistency-patch
 requires:
   - boost
   - "GCC-Toolchain:(?!osx)"
@@ -17,7 +17,7 @@ requires:
   - fmt
 build_requires:
   - CMake
-source: https://github.com/AliceO2Group/Readout
+source: https://github.com/kostorr/Readout
 incremental_recipe: |
   make ${JOBS:+-j$JOBS} install
   mkdir -p $INSTALLROOT/etc/modulefiles && rsync -a --delete etc/modulefiles/ $INSTALLROOT/etc/modulefiles
